@@ -55,7 +55,7 @@ export class EntregadorPage implements OnInit {
           text: 'Iniciar',
           handler: () => { 
             console.log("Abrir GPS");
-            this.router.navigateByUrl('https://www.google.com.br/maps/dir/-21.7702527,-45.9674667/Est%C3%A1dio+Centen%C3%A1rio,+11400+Montevideo,+Departamento+de+Montevideo,+Uruguai/@-27.9665376,-60.2187846,5z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x959f81021a293c9f:0x47c23b3c464091c1!2m2!1d-56.1528289!2d-34.8945376!3e0')
+            window.open('https://www.google.com.br/maps/dir/-21.7702527,-45.9674667/Est%C3%A1dio+Centen%C3%A1rio,+11400+Montevideo,+Departamento+de+Montevideo,+Uruguai/@-27.9665376,-60.2187846,5z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x959f81021a293c9f:0x47c23b3c464091c1!2m2!1d-56.1528289!2d-34.8945376!3e0', '_system');
            }
         },
 
