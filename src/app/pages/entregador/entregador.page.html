@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header" color="primary">
+    <ion-title>
+      ENTREGADOR
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar color="ligtt" [(ngModel)]="nome" placeholder="Código de Rastreio"
+      (ionChange)="localizarObjeto($event)">
+
+    </ion-searchbar>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+
+
+  <ion-card class="entrega" (click)="alert()" *ngIf="visto">
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Entrega Andreas Pereira</ion-label>
+      <ion-button fill="outline" slot="end" *ngIf="sel">Visto</ion-button>
+      <ion-button fill="outline" slot="end" color="danger" *ngIf="!sel">Não Visto</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="selcionaComprador()">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Comprador</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="selcionaEntregador()">
+        <ion-icon name="car"></ion-icon>
+        <ion-label>Entregador</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</ion-content>
