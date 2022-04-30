@@ -3,11 +3,15 @@
     <ion-title>
       COMPRADOR
     </ion-title>
+    <ion-buttons slot="end" (click)="authService.SignOut()">
+      <ion-icon name="log-out-outline" size="large" slot="end"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
   <ion-toolbar color="primary">
-    <ion-searchbar color="ligtt" [(ngModel)]="nome" placeholder="Código de Rastreio"  (ionChange)="localizarObjeto($event)">
+    <ion-searchbar color="ligtt"  placeholder="Código de Rastreio"  (ionChange)="localizarObjeto($event)">
 
     </ion-searchbar>
+    
 
   </ion-toolbar>
 </ion-header>

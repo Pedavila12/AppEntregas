@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { CorreioService } from './../../services/correio.service';
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { AuthenticationService } from 'src/app/shared/authentication.service';
 
 @Component({
   selector: 'app-entregador',
@@ -12,7 +13,7 @@ export class EntregadorPage implements OnInit {
   aux: number = 0;
   visto: boolean = false;
   sel: boolean = false;
-  constructor(private correioService: CorreioService, private alertCtrl: AlertController, private router: Router) { }
+  constructor(private correioService: CorreioService, private alertCtrl: AlertController, private router: Router, public authService: AuthenticationService) { }
 
   ngOnInit() {
   }

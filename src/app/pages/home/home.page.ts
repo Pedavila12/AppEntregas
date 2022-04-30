@@ -2,6 +2,7 @@ import { CorreioService } from './../../services/correio.service';
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/shared/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage {
 
   eventosCollection : any[] = [];
 
-  constructor(private correioService : CorreioService, private toastCtrl : ToastController, private router : Router ) {}
+  constructor(private correioService : CorreioService, private toastCtrl : ToastController, private router : Router, public authService: AuthenticationService ) {}
 
   localizarObjeto(event){
     let codigoObjeto = event.detail.value;
